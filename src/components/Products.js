@@ -3,7 +3,7 @@ const productLists = [
   {name: "Product 1", 
   id: 1,
   price: 10,
-  description:"RAM desktop APACER DDR4 8G 3200 OC NOX RGB AURA 2 (1 x 8GB) DDR4 3200MHz (AH4U08G32C28YNBAA-1)"
+  description:" tétRAM desktop APACER DDR4 8G 3200 OC NOX RGB AURA 2 (1 x 8GB) DDR4 3200MHz (AH4U08G32C28YNBAA-1)"
   },
   {name: "Product 2", 
   id: 2,

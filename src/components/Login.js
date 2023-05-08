@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Lognin (){
+function Login (){
     const [email, setEmail ] = useState("");
     const [password, setPassword ] = useState("");
     return (
@@ -23,4 +23,4 @@ function Lognin (){
         </form>
       );
 }
-export default Lognin;
+export default Login;
