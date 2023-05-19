@@ -1,26 +1,29 @@
 import { Routes, Route, Link} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
-import Products from './components/Products';   // nó bị vấn đề ở đây , lúc đầu dợ dùng import Products from './Products'; thì nó đang hiểu là cái Products component bên ngoài (cái mà chồng đã thay đổi thành Products_)
-import Home from './components/Home';
-import Login from './components/Login';
+import Home from './components/Home/Home';
+import Products from './components/Products/Products';   
+import Product from './components/Product/Product';
+import Login from './components/Login/Login';
 import React from 'react';
 import { useState } from 'react';
+import  './components/Global.css';
+
 
 function App() {
   
   return (
     <div className="App">
-      <nav>
+      <nav className="header">
         <ul>
           <li>
-            <Link to ='/'>Home</Link>
+            <Link to ='/' className="nav-link">Home</Link>
           </li>
           <li>
-            <Link to ='/products'>Products</Link>
+            <Link to ='/products' className="nav-link">Products</Link>
           </li>
           <li>
-            <Link to ='/login'>Login</Link>
+            <Link to ='/login' className="nav-link">Login</Link>
           </li>
          
         </ul>
@@ -29,6 +32,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/products' element={<Products/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/products/:id' element={<Product/>}/>
       </Routes>
      
     </div>

@@ -1,0 +1,16 @@
+.productList{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+
+}
+.productItem{
+width: 400px;
+height: 500px;
+text-align: center;
+}
+.oldPrice{
+  text-decoration: line-through;
+  color: gray;
+}
+
