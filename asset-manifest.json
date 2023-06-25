@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "//vothithu11.github.io/thu-react/static/css/main.a5c1ee22.css",
+    "main.js": "//vothithu11.github.io/thu-react/static/js/main.92583cd0.js",
+    "static/js/787.fe00223f.chunk.js": "//vothithu11.github.io/thu-react/static/js/787.fe00223f.chunk.js",
+    "index.html": "//vothithu11.github.io/thu-react/index.html",
+    "main.a5c1ee22.css.map": "//vothithu11.github.io/thu-react/static/css/main.a5c1ee22.css.map",
+    "main.92583cd0.js.map": "//vothithu11.github.io/thu-react/static/js/main.92583cd0.js.map",
+    "787.fe00223f.chunk.js.map": "//vothithu11.github.io/thu-react/static/js/787.fe00223f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5c1ee22.css",
+    "static/js/main.92583cd0.js"
+  ]
+}
