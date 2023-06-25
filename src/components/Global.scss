@@ -1,0 +1,54 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,800;1,500&display=swap');
+* {
+    text-decoration: none;
+}
+.header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #b0c4de;
+    text-align: center;
+    font-weight: bold;
+}
+li {
+    display: inline-block;
+}
+.nav-link {
+    display: block;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    background-color: #006699;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    text-decoration: none;
+    color: #000080;
+    text-align: center;
+}
+@media only screen and (max-width: 576px) {
+    .App {
+        margin-left: 150px;
+        width: 100%;
+    }
+    body {
+        margin: 0;
+        font-size: 24px;
+        box-sizing: border-box;
+    }
+    .header ul {
+        width: 500px;
+    }
+}

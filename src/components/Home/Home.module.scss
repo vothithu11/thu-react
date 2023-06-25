@@ -1,20 +1,42 @@
-.detaiProduct{
+.detaiProduct {
     width: 700px;
     height: auto;
     border: 1px none rgb(37, 34, 34);
     margin: auto;
-  div{
-    padding: 20px;
-  }
-   
+    div {
+        padding: 20px;
+    }
 }
-.detaiProduct .description{
+.detaiProduct .description {
     text-align: justify;
     padding: 10px;
-   }
-.detaiProduct .name, .price{
+}
+.detaiProduct .name,
+.price {
     font-weight: bold;
-    color:#990033;
-   }
+    color: #990033;
+}
 
-
+.images img {
+    max-width: 100%;
+    height: auto;
+}
+.detaiProduct h2 {
+    text-shadow: 2px 2px 5px red;
+}
+@media only screen and (max-width: 576px) {
+    .detaiProduct {
+        margin-left: -5px;
+    }
+    .detaiProduct .image img {
+        width: 500px;
+        height: 600px;
+    }
+    .detaiProduct .description {
+        width: 550px;
+        font-size: 26px;
+    }
+    .images {
+        width: 500px;
+    }
+}
