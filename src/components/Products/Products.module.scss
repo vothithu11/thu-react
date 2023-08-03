@@ -1,28 +1,21 @@
-.productList {
+.products {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 20px;
 }
-.productItem {
-    width: 400px;
-    height: 500px;
-    text-align: center;
+
+.menuProduct {
+    button {
+        border: 1px solid #e5e7eb;
+        padding: 7px;
+        margin: 3px;
+    }
+    button:hover {
+        background-color: #aa0000;
+    }
 }
-.oldPrice {
-    text-decoration: line-through;
-    color: gray;
-}
-.pageList {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    grid-gap: 20px;
-}
-.productDescription {
-    text-align: justify;
-}
-.productPrice {
-    font-weight: bold;
-}
+
+/*
 @media only screen and (max-width: 1024px) {
     .productList {
         display: grid;
@@ -35,4 +28,4 @@
         grid-template-columns: auto;
         width: 80%;
     }
-}
+}*/

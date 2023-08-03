@@ -1,56 +1,30 @@
-import { Routes, Route, Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faCircleXmark,
-    faSpinner,
-    faMagnifyingGlass,
-} from '@fortawesome/free-solid-svg-icons';
-import Home from './components/Home/Home';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Products from './components/Products/Products';
+import Home from './components/Home/Home';
 import Product from './components/Product/Product';
 import Login from './components/Login/Login';
-import React from 'react';
-import Search from './components/Search/Search';
-import { useState } from 'react';
 import './components/Global.scss';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Cart from './components/Cart/Cart';
+import ProductLists from './Data1';
+import Search from './components/Search/Search';
 
 function App() {
-    const [search, setSearch] = useState();
-
     return (
         <div className="App">
-            <nav className="header">
-                <ul>
-                    <li>
-                        <Link to="/" className="nav-link" title="Home">
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="/products"
-                            className="nav-link"
-                            title="Products"
-                        >
-                            Products
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/login" className="nav-link" title="Login">
-                            Login
-                        </Link>
-                    </li>
-                </ul>
-                <Search />
-            </nav>
-
+            <Header />
             <Routes>
+                <Route path="/products/:id" element={<Product />} />
+                <Route path="/search" element={<Search />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/products/:id" element={<Product />} />
-                <Route path="/search/:keyword" element={<Search />} />
+
+                <Route path="/cart" element={<Cart />} />
             </Routes>
+            <Footer />
         </div>
     );
 }

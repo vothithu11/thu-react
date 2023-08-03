@@ -1,0 +1,13 @@
+.productOldPrice {
+    text-decoration: line-through;
+    color: gray;
+}
+.productDetails {
+    border: 2px solid #e5e7eb;
+    border-radius: 5px;
+    padding: 2px;
+}
+.productDetails:hover {
+    color: #aa0000;
+    border: 2px solid #aa0000;
+}
