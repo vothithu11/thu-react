@@ -1,14 +1,29 @@
-/*.productList{
+.productList {
     width: 700px;
     height: auto;
     border: 1px none rgb(37, 34, 34);
     padding: auto;
     margin: auto;
-   
-    p{
-     
-        color:black;
+    width: 80%;
+
+    p {
+        color: black;
         text-align: justify;
         padding: 20px;
     }
-}*/
+}
+.productOldPrice {
+    text-decoration: line-through;
+    color: gray;
+}
+.btn {
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #cd5c5c;
+    border: none;
+    color: white;
+}
+.btn:hover {
+    background-color: #aa0000;
+}

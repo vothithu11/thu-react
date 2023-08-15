@@ -1,7 +1,6 @@
-.formSearch {
-    border: 1px solid gray;
-    width: 250px;
-}
-.inputSearch {
-    border-color: none;
+.productSearch {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    color: red;
 }

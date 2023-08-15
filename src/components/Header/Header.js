@@ -1,21 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import styles from './Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-import SearchBar from '../SearchBar/SearchBar';
-import Search from '../Search/Search';
-import productLists from '../../Data1';
-import { useState } from 'react';
+import SearchBtn from '../SearchBtn/SearchBtn';
+
 import CartBtn from '../CartBtn/CartBtn';
 function Header() {
-    const [searchResults, setSearchResults] = useState([]);
-    const handleSearch = (keyword) => {
-        const results = productLists.filter((value) =>
-            value.name.toLowerCase().includes(keyword.toLowerCase()),
-        );
-        setSearchResults(results);
-    };
     return (
         <div className={styles.header}>
             <div className={styles.navbar}>
@@ -49,14 +40,10 @@ function Header() {
                         </Link>
                     </li>
                 </ul>
+                <Outlet />
                 <CartBtn />
-
-                <div className={styles.searchBtn}>
-                    <SearchBar onSearch={handleSearch} />
-
-                    <Search searchResults={searchResults} />
-                </div>
             </div>
+            <SearchBtn />
         </div>
     );
 }

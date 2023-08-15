@@ -4,7 +4,7 @@ const reducer = (state = addItem, action) => {
     switch (action.type) {
         case 'ADD':
             return [...state, action.payload];
-            break;
+
         case 'DEL':
             const positionProductDeL = state.findIndex(
                 (item) => item.id === action.payload.id,
@@ -17,11 +17,8 @@ const reducer = (state = addItem, action) => {
                 return state;
             }
 
-            break;
-
         default:
             return state;
-            break;
     }
 };
 const store = createStore(reducer);

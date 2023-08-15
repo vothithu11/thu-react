@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import styles from './Products.module.scss';
 import productLists from '../../Data1';
-import { Link } from 'react-router-dom';
 import CategoryLists from '../../Data2';
 import ProductItem from '../ProductItem/ProductItem';
+import { Link } from 'react-router-dom';
 
 function Products() {
     const [filteredProducts, setFilteredProducts] = useState(productLists);
@@ -31,7 +31,10 @@ function Products() {
     return (
         <>
             <div className={styles.menuProduct}>
-                <button onClick={() => setFilteredProducts(productLists)}>
+                <button
+                    className={styles.menuProductALL}
+                    onClick={() => setFilteredProducts(productLists)}
+                >
                     ALL
                 </button>
                 {CategoryLists.map((menu) => (
@@ -45,21 +48,24 @@ function Products() {
             </div>
             <div className={styles.products}>
                 {currentData.map((product) => (
-                    <ProductItem product={product} key={product.id} />
+                    <Link to={`/products/${product.id}`}>
+                        <ProductItem product={product} key={product.id} />
+                    </Link>
                 ))}
             </div>
             <div>
-                <button>Go back</button>
+                <button className={styles.paginationBtn}>Go back</button>
                 {Array.from(myArr, (index) => index + 1).map((pageNumber) => (
                     <button
                         key={pageNumber}
                         onClick={() => handlePageChange(pageNumber)}
                         disabled={currentPage === pageNumber}
+                        className={styles.paginationBtn}
                     >
                         {pageNumber}
                     </button>
                 ))}
-                <button>Go forward</button>
+                <button className={styles.paginationBtn}>Go forward</button>
             </div>
         </>
     );

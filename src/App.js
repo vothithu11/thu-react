@@ -8,20 +8,22 @@ import './components/Global.scss';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Cart from './components/Cart/Cart';
-import ProductLists from './Data1';
+
 import Search from './components/Search/Search';
+// import SearchBtn from './components/SearchBtn/SearchBtn';
 
 function App() {
     return (
         <div className="App">
             <Header />
+
             <Routes>
                 <Route path="/products/:id" element={<Product />} />
+                {/* <Route path="search/:id" element={<Product />} /> */}
                 <Route path="/search" element={<Search />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/login" element={<Login />} />
-
                 <Route path="/cart" element={<Cart />} />
             </Routes>
             <Footer />
