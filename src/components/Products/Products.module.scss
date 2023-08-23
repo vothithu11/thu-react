@@ -22,17 +22,15 @@
     padding: 20px;
 }
 
-/*
 @media only screen and (max-width: 1024px) {
-    .productList {
+    .products {
         display: grid;
         grid-template-columns: auto auto;
     }
 }
 @media only screen and (max-width: 576px) {
-    .productList {
+    .products {
         display: grid;
         grid-template-columns: auto;
-        width: 80%;
     }
-}*/
+}

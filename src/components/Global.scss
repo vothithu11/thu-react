@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 2px;
     padding: 0;
     background-color: #fff;
     color: #000;
@@ -8,16 +8,32 @@
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
     text-decoration: none;
     text-align: center;
+    overflow-x: hidden;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 1024px) {
     .App {
-        margin-left: 150px;
+        margin-left: 5px;
         width: 100%;
     }
     body {
         margin: 0;
         font-size: 24px;
+        box-sizing: border-box;
+    }
+    .header ul {
+        width: 500px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .App {
+        margin: 3px;
+        width: 98%;
+        margin-right: 8px;
+    }
+    body {
+        margin: 0;
+        font-size: 20px;
         box-sizing: border-box;
     }
     .header ul {

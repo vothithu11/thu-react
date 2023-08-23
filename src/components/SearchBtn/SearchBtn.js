@@ -4,19 +4,21 @@ import SearchBar from '../SearchBar/SearchBar';
 import Search from '../Search/Search';
 import productLists from '../../Data1';
 
-function SearchBtn() {
+function SearchBtn(props) {
     const [searchResults, setSearchResults] = useState([]);
-    const [showResults, setShowResults] = useState(true);
+
     const handleSearch = (keyword) => {
         const results = productLists.filter((value) =>
             value.name.toLowerCase().includes(keyword.toLowerCase()),
         );
         setSearchResults(results);
+        // props.showResults = true;
     };
     return (
         <>
-            <SearchBar onSearch={handleSearch} />
-            {showResults && <Search searchResults={searchResults} />}
+            <SearchBar onSearch={handleSearch} onClick={props.onClick} />
+
+            {props.showResults && <Search searchResults={searchResults} />}
         </>
     );
 }

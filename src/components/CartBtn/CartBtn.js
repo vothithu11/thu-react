@@ -5,12 +5,12 @@ import { useSelector } from 'react-redux/es/hooks/useSelector';
 import styles from './CartBtn.module.scss';
 import { Link } from 'react-router-dom';
 
-function CartBtn() {
+function CartBtn(props) {
     const state = useSelector((state) => state);
     return (
         <div className={styles.cartBtn}>
             <Link to="/cart" className={styles.navLink} title="cart">
-                <button>
+                <button onClick={props.onClick}>
                     <FontAwesomeIcon icon={faCartShopping} />
                     Cart ({state.length})
                 </button>

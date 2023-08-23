@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import styles from './Login.module.scss';
+import { GoogleLogin } from 'react-google-login';
 
 function Login() {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const responseGoogle = (response) => {
+        console.log(response);
+    };
     return (
         <div className={styles.container}>
             <img
@@ -13,13 +18,7 @@ function Login() {
                 src="https://didongviet.vn/icon/login/loginbg.png"
                 alt=""
             />
-            <form>
-                <input
-                    type="text"
-                    value={name}
-                    placeholder="Enter your name"
-                    onChange={(e) => setName(e.target.value)}
-                />
+            <form className={styles.form}>
                 <input
                     type="text"
                     value={phone}
@@ -38,7 +37,16 @@ function Login() {
                     placeholder="Enter your password"
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <button>Đăng ký</button>
+                <button className={styles.submitBtn}>Đăng ký</button>
+                {/* <button className={styles.googleLogin}> */}
+                <GoogleLogin
+                    clientId="589967033121-jp2guvboikmr6miu6gs9h23qf3fhbr4k.apps.googleusercontent.com"
+                    buttonText="Login in with Google"
+                    onSuccess={responseGoogle}
+                    onFailure={responseGoogle}
+                    cookiePolicy={'single_host_origin'}
+                />
+                {/* </button> */}
             </form>
         </div>
     );

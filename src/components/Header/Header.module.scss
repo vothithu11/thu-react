@@ -7,17 +7,13 @@
 }
 .navbar {
     display: grid;
-    grid-template-columns: 30% 45% 25%;
+    grid-template-columns: 30% 70%;
     grid-gap: 20px;
     font-weight: bold;
-    span {
-        color: red;
-        font-weight: bold;
-        font-size: 20px;
-    }
+
     ul {
         display: grid;
-        grid-template-columns: auto auto auto auto auto auto;
+        grid-template-columns: 20% 20% 20% 40%;
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -31,7 +27,7 @@
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        width: 30%;
+        width: 60%;
         font-weight: bold;
     }
     button:hover {
@@ -39,16 +35,35 @@
         color: #aa0000;
     }
 }
-.navLink {
+.title {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+.link {
     border: 2px solid none;
     display: block;
     padding: 2px;
     text-align: center;
 }
-.navLink:hover {
+.link:hover {
     background-color: #aa0000;
 }
 .user {
     outline: none;
     background-color: transparent;
+}
+@media only screen and (max-width: 576px) {
+    .navbar {
+        display: block;
+        grid-gap: 2px;
+        width: 100%;
+    }
+    ul {
+        display: grid;
+        grid-template-columns: 22% 22% 22% 34%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
 }

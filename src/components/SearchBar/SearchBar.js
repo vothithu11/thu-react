@@ -4,13 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
-function SearchBar({ onSearch }) {
+function SearchBar(props) {
     const [keyword, setKeyword] = useState('');
     const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSearch(keyword);
-        console.log(keyword);
+        props.onSearch(keyword);
         navigate('/search');
     };
     return (
@@ -23,7 +22,11 @@ function SearchBar({ onSearch }) {
                 placeholder="Type to search"
                 onChange={(e) => setKeyword(e.target.value)}
             />
-            <button className={styles.searchBtn2} type="submit">
+            <button
+                className={styles.searchBtn2}
+                type="submit"
+                onClick={props.onClick}
+            >
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
             </button>
         </form>

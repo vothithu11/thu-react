@@ -6,7 +6,7 @@
     background-color: white;
     display: flex;
     align-items: center;
-    margin-left: 520px;
+    margin-left: 620px;
     width: 300px;
     margin-bottom: 0px;
     margin-top: 20px;
@@ -26,4 +26,17 @@
     margin-right: 0px;
     width: 50px;
     border: none;
+}
+@media only screen and (max-width: 1024px) {
+    .searchForm {
+        margin-left: 220px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .searchForm {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
 }

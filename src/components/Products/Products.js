@@ -48,13 +48,13 @@ function Products() {
             </div>
             <div className={styles.products}>
                 {currentData.map((product) => (
-                    <Link to={`/products/${product.id}`}>
+                    <Link to={`/products/${product.id}`} key={product.id}>
                         <ProductItem product={product} key={product.id} />
                     </Link>
                 ))}
             </div>
-            <div>
-                <button className={styles.paginationBtn}>Go back</button>
+            <div className={styles.pagination}>
+                <button className={styles.paginationBtn}>&laquo;</button>
                 {Array.from(myArr, (index) => index + 1).map((pageNumber) => (
                     <button
                         key={pageNumber}
@@ -65,7 +65,7 @@ function Products() {
                         {pageNumber}
                     </button>
                 ))}
-                <button className={styles.paginationBtn}>Go forward</button>
+                <button className={styles.paginationBtn}>&laquo;</button>
             </div>
         </>
     );
