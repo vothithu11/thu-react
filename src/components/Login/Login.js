@@ -38,15 +38,6 @@ function Login() {
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <button className={styles.submitBtn}>Đăng ký</button>
-                {/* <button className={styles.googleLogin}> */}
-                <GoogleLogin
-                    clientId="589967033121-jp2guvboikmr6miu6gs9h23qf3fhbr4k.apps.googleusercontent.com"
-                    buttonText="Login in with Google"
-                    onSuccess={responseGoogle}
-                    onFailure={responseGoogle}
-                    cookiePolicy={'single_host_origin'}
-                />
-                {/* </button> */}
             </form>
         </div>
     );
